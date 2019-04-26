@@ -61,6 +61,9 @@ import {getScaleType} from '../common/domain.helper';
           [colors]="colors"
           [data]="results"
           [gradient]="gradient"
+          [min]="min"
+          [max]="max"
+          [invalidColor]="invalidColor"
           [animations]="animations"
           [tooltipDisabled]="tooltipDisabled"
           [tooltipTemplate]="tooltipTemplate"
@@ -99,6 +102,7 @@ export class HeatMapComponent extends BaseChartComponent {
   @Input() tooltipText: any;
   @Input() min: any;
   @Input() max: any;
+  @Input() invalidColor: string;
 
   @ContentChild('tooltipTemplate') tooltipTemplate: TemplateRef<any>;
 
